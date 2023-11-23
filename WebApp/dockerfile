@@ -1,0 +1,13 @@
+# Utilisation d'une image Nginx officielle en tant que base
+FROM nginx
+
+# Copier le fichier index.html dans le répertoire de contenu par défaut de Nginx
+COPY index.html /usr/share/nginx/html
+
+# Exposer le port 80 pour les requêtes HTTP
+EXPOSE 80
+
+# Commande pour démarrer le serveur Nginx
+CMD ["nginx", "-g", "daemon off;"]
+
+
